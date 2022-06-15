@@ -1,0 +1,40 @@
+{
+  "root": true,
+  "extends": ["@guanghechen", "prettier"],
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "es6": true,
+    "jest": true,
+    "node": true
+  },
+  "rules": {},
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "extends": ["@guanghechen", "@guanghechen/ts", "prettier"],
+      "rules": {
+        "@typescript-eslint/no-redeclare": [
+          2,
+          {
+            "ignoreDeclarationMerge": true
+          }
+        ],
+        "@typescript-eslint/no-empty-interface": 0,
+        "@typescript-eslint/strict-boolean-expressions": [
+          2,
+          {
+            "allowString": true,
+            "allowNumber": true,
+            "allowNullableObject": false,
+            "allowNullableBoolean": true,
+            "allowNullableString": true,
+            "allowNullableNumber": false,
+            "allowAny": false
+          }
+        ],
+        "import/no-named-as-default": 0
+      }
+    }
+  ]
+}
