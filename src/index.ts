@@ -1,13 +1,34 @@
-import PluginEditor from '@draft-js-plugins/editor'
-import createMentionPlugin from '@draft-js-plugins/mention'
-
-export * from 'draft-js'
+// `export * from 'draft-js'` is not working
 export {
-  createEditorStateWithText,
-  composeDecorators,
-  PluginEditorProps,
-} from '@draft-js-plugins/editor'
+  AtomicBlockUtils,
+  BlockMapBuilder,
+  CharacterMetadata,
+  CompositeDecorator,
+  ContentBlock,
+  ContentState,
+  DefaultDraftBlockRenderMap,
+  DefaultDraftInlineStyle,
+  Editor,
+  EditorBlock,
+  EditorState,
+  Entity,
+  EntityInstance,
+  KeyBindingUtil,
+  Modifier,
+  RawDraftContentState,
+  RichUtils,
+  SelectionState,
+  convertFromHTML,
+  convertFromRaw,
+  convertToRaw,
+  genKey,
+  getDefaultKeyBinding,
+  getVisibleSelectionRect,
+} from 'draft-js'
+
+export * from '@draft-js-plugins/editor'
 export * from '@draft-js-plugins/mention'
+export { default as createMentionPlugin } from '@draft-js-plugins/mention'
+export { default as PluginEditor } from '@draft-js-plugins/editor'
 export * from './adjustBlockDepthForContentState'
 export * from './isSoftNewlineEvent'
-export { PluginEditor, createMentionPlugin }

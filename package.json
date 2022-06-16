@@ -1,6 +1,6 @@
 {
   "name": "@local-bundle/draft-js-editor",
-  "version": "0.11.7",
+  "version": "0.11.7-rc.1",
   "description": "bundle draft-js, @draft-js-plugins/editor and @draft-js-plugins/mention",
   "private": true,
   "main": "lib/cjs/index.js",
@@ -15,8 +15,9 @@
     "README.md"
   ],
   "scripts": {
-    "prebuild": "rimraf lib/",
-    "build": "cross-env NODE_ENV=production rollup -c rollup.config.js"
+    "build": "cross-env NODE_ENV=production rollup -c rollup.config.js",
+    "bump": "yarn build && npm version prepatch && npm pack",
+    "prebuild": "rimraf lib/"
   },
   "dependencies": {},
   "devDependencies": {
