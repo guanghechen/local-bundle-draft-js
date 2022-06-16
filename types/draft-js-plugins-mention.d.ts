@@ -39,9 +39,9 @@ export interface SubMentionComponentProps {
 
 export interface EntryComponentProps {
   className?: string
-  onMouseDown(event: MouseEvent): void
-  onMouseUp(event: MouseEvent): void
-  onMouseEnter(event: MouseEvent): void
+  onMouseDown(event: React.MouseEvent): void
+  onMouseUp(event: React.MouseEvent): void
+  onMouseEnter(event: React.MouseEvent): void
   role: string
   id: string
   'aria-selected'?: boolean | 'false' | 'true'
