@@ -24,7 +24,8 @@ const configs = [
         }),
         copy({
           targets: [
-            { src: 'types/**/*', dest: 'lib/types' }
+            { src: 'types/**/*', dest: 'lib/types' },
+            { src: 'node_modules/draft-js/dist/Draft.css', dest: 'lib/' },
           ]
         })
       ].filter(x => Boolean(x)),
